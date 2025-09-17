@@ -1,7 +1,7 @@
 import time
 from adafruit_servokit import ServoKit 
 
-pca = ServoKit(channels=16,fre)
+pca = ServoKit(channels=16)
 
 
 pca.servo[0].set_pulse_width_range(500, 2400)
