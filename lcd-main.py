@@ -4,8 +4,8 @@ import time
 lcd = CharLCD('PCF8574', 0x27)
 
 
-lcd.write_string('Hello Juan!\n\rHola Javier!')
-time.sleep(2)
+lcd.write_string('juanjuanjuanjuanjuanjuanjuanjuanjuan')
+time.sleep(5)
 lcd.clear()
 lcd.write_string('Hola Hola!')
 time.sleep(1)
