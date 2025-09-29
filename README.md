@@ -14,17 +14,23 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 pip install uv
 ```
 
-## Create environment
+## Create environment 
 When the repo was created
 
 ```bash
-uv init mcp-oauth
-cd  mcp-oauth
+uv init eurobot
+cd  eurobot
 uv venv
 
 source .venv/bin/activate
-uv add mcp anthropic pyjwt
+uv add adafruit-circuitpython-servokit rpi-gpio
 ```
+
+## Clone repo
+```bash
+git clone https://github.com/JoseIbanez/eurobot.git
+```
+
 
 ## Update after clone
 If you clone this repo, then create the venv, and install python pkgs
