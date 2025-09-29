@@ -44,6 +44,9 @@ uv sync
 
 
 
+## Tools: Identify PCA position
+
+```bash
 
 sudo apt-get install i2c-tools
 
@@ -57,7 +60,7 @@ pi@rp3:~ $ i2cdetect -y 1
 50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 70: 70 -- -- -- -- -- -- --    
-
+```
 
 #LCD
 https://rplcd.readthedocs.io/en/stable/getting_started.html
