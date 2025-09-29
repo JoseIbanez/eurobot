@@ -62,6 +62,6 @@ pi@rp3:~ $ i2cdetect -y 1
 70: 70 -- -- -- -- -- -- --    
 ```
 
-#LCD
+## LCD
 https://rplcd.readthedocs.io/en/stable/getting_started.html
 
