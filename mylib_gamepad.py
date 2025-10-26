@@ -28,6 +28,7 @@ class Gamepad:
                 if not event:
                     break
 
+
                 if event.type != evdev.ecodes.EV_KEY:
                     continue
             
@@ -54,7 +55,7 @@ class Gamepad:
         for event in self.eventList:
             if event == event_code:
                 count += 1
-
+ 
         return count
 
 # Create object
