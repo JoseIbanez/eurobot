@@ -9,7 +9,7 @@ scan on
 
 pair XX:XX:XX:XX:XX:XX
 
-trush XX:XX:XX:XX:XX:XX
+trust XX:XX:XX:XX:XX:XX
 
 connect XX:XX:XX:XX:XX:XX
 
