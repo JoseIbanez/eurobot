@@ -1,3 +1,13 @@
+"""
+Servo Motor Test Script
+
+This script initializes the Adafruit ServoKit (16 channels, address 0x41) and performs a movement test 
+on servos connected to channel 0 and channel 15.
+
+It sets the pulse width range to 500-2400 microseconds.
+The test toggles the servos between 0 and 90 degrees 3 times, ending at a specific position.
+"""
+
 import time
 from adafruit_servokit import ServoKit 
 
