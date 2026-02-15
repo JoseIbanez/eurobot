@@ -1,5 +1,5 @@
 import evdev
-from evdev.ecodes import EV_KEY, KEY_F, KEY_E, KEY_C, KEY_D, KEY_G
+from evdev.ecodes import EV_KEY, KEY_F, KEY_E, KEY_C, KEY_D, KEY_G, KEY_M, KEY_K
 
 class Gamepad:
 

@@ -2,13 +2,14 @@ import time
 import busio
 from board import SCL, SDA
 from adafruit_pca9685 import PCA9685
-from adafruit_motor import motor
+from adafruit_motor import motor, servo
 
 
 
 i2c = busio.I2C(SCL, SDA)
 pca = PCA9685(i2c, address=64)
 pca.frequency = 1000
+
 
 
 motor1 = motor.DCMotor(pca.channels[0], pca.channels[1])
@@ -18,6 +19,17 @@ motor1.decay_mode = motor.SLOW_DECAY
 motor2 = motor.DCMotor(pca.channels[2], pca.channels[3])
 # Set motor to active braking mode to improve performance
 motor2.decay_mode = motor.SLOW_DECAY  
+
+
+# Initialize servo PCA9685 class
+pca_s = PCA9685(i2c, address=0x41)
+pca_s.frequency = 50
+
+
+# Create Servo objects
+# servo-main.py used range 500-2400
+servo1 = servo.Servo(pca_s.channels[0], min_pulse=500, max_pulse=2400)
+servo2 = servo.Servo(pca_s.channels[1], min_pulse=500, max_pulse=2400)
 
 
 
@@ -69,4 +81,18 @@ def set_motor(pos:int, throttle:int):
         motor2.throttle = t
 
     
+
+def set_servo(pos:int, angle:int):
+    global servo1
+    global servo2
+
+    if pos == 1:
+       servo1.angle = angle
+
+    if pos == 2:
+       servo2.angle = angle
+
+
+
+
 
