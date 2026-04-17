@@ -27,27 +27,27 @@ servo1 = servo.Servo(pca.channels[1], min_pulse=400, max_pulse=3000)
 
 time.sleep(2)
 
-for i in [0, 1, 2]:
+for i in []: #[0, 1, 2]:
     print("pos 1")
     servo0.angle = 0
-    servo1.angle = 0
+    #servo1.angle = 0
     time.sleep(1)
 
     print("pos 2")
     servo0.angle = 90
-    servo1.angle = 90
+    #servo1.angle = 90
     time.sleep(1)
 
     print("pos 3")
     servo0.angle = 180 
-    servo1.angle = 180 
+    #servo1.angle = 180 
     time.sleep(2)
 
 
 
 print("pos 0")
-servo0.angle = 0
-servo1.angle = 0
+#servo0.angle = 180
+servo1.angle = 180
 time.sleep(1)
 
 # De-initialize to release resources (good practice, though script ends anyway)
